@@ -1,0 +1,44 @@
+.title,
+.subtitle {
+  text-align: center;
+}
+
+.title {
+  color: var(--neutral-gray-900);
+  font-size: 1.8rem;
+
+  @media (width >= 1440px) {
+    font-size: 2rem;
+  }
+}
+
+.subtitle {
+  color: var(--neutral-gray-500);
+  max-width: 40ch;
+  margin: 1rem auto 0 auto;
+  line-height: 2;
+}
+
+.statsContainer {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  background: linear-gradient(to bottom,
+      var(--primary-blue-400) 0%,
+      var(--primary-blue-400) 100%);
+  background-size: 10px 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    background: linear-gradient(to right,
+      var(--primary-blue-400) 0%,
+      var(--primary-blue-400) 100%);
+    background-size: 100% 10px;
+    background-repeat: no-repeat;
+    background-position: center 52%;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Dm sans';
+    src: url('/fonts/DMSans-Light.ttf') format(truetype);
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dm sans';
+    src: url('/fonts/DMSans-Medium.ttf') format(truetype);
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dm sans';
+    src: url('/fonts/DMSans-SemiBold.ttf') format(truetype);
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dm sans';
+    src: url('/fonts/DMSans-SemiBoldItalic.ttf') format(truetype);
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dm sans';
+    src: url('/fonts/DMSans-Bold.ttf') format(truetype);
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bricolage Grotesque";
+    src: url('/fonts/BricolageGrotesque-Bold.ttf') format(truetype);
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    --font-dmsans: 'Dm sans', sans-serif;
+    --font-bricolage: 'Bricolage Grotesque', sans-serif;
+
+    --color-neutral-0: hsl(0, 0%, 100%);
+    --color-neutral-200: hsl(250, 6%, 84%);
+    --color-neutral-300: hsl(240, 6%, 70%);
+    --color-neutral-600: hsl(243, 23%, 30%);
+    --color-neutral-700: hsl(243, 23%, 24%);
+    --color-neutral-800: hsl(243, 27%, 20%);
+    --color-neutral-900: hsl(243, 96%, 9%);
+
+    --color-primary-orange-500: hsl(28, 100%, 52%);
+
+    --color-secondary-blue-500: hsl(233, 67%, 56%);
+    --color-secondary-blue-700: hsl(248, 70%, 36%);
+
+    --text-body: 18px;
+
+    --breakpoint-1xl: 90rem;
+}
+
+@layer base {
+    body {
+        font-family: var(--font-dmsans);
+        background-color: var(--color-neutral-900);
+        color: var(--color-neutral-0);
+        font-size: var(--text-body);
+    }
+}
+
+@layer components {
+    .text-preset-1 {
+        @apply font-semibold italic;
+        font-size: 6rem;
+        line-height: 100%;
+        letter-spacing: -2px;
+    }
+    .text-preset-2 {
+        @apply font-bricolage font-bold;
+        font-size: 3.25rem;
+        line-height: 120%;
+        letter-spacing: 0;
+    }
+    .text-preset-3 {
+        @apply font-light;
+        font-size: 2rem;
+        line-height: 100%;
+        letter-spacing: 0;
+    }
+    .text-preset-4 {
+        @apply font-bold;
+        font-size: 1.75rem;
+        line-height: 120%;
+        letter-spacing: 0;
+    }
+    .text-preset-5 {
+        @apply font-semibold;
+        font-size: 1.25rem;
+        line-height: 120%;
+        letter-spacing: 0;
+    }
+    .text-preset-5-medium {
+        @apply font-medium;
+        font-size: 1.25rem;
+        line-height: 120%;
+        letter-spacing: 0;
+    }
+    .text-preset-6 {
+        @apply font-medium;
+        font-size: 1.125rem;
+        line-height: 120%;
+        letter-spacing: 0;
+    }
+    .text-preset-7 {
+        @apply font-medium;
+        font-size: 1rem;
+        line-height: 120%;
+        letter-spacing: 0;
+    }
+    .text-preset-8 {
+        @apply font-medium;
+        font-size: 0.875rem;
+        line-height: 120%;
+        letter-spacing: 0;
+    }
+}

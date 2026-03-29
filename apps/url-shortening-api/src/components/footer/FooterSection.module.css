@@ -1,0 +1,35 @@
+.footerSection {
+  h3 {
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.5rem;
+
+    @media (width >=1440px) {
+      text-align: left;
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      li {
+        color: var(--neutral-gray-400);
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: var(--primary-blue-400);
+        }
+      }
+
+      @media (width >=1440px) {
+        align-items: flex-start;
+      }
+    }
+  }
+}

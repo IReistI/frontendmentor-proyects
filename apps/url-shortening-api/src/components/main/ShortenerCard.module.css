@@ -1,0 +1,103 @@
+.shortenerCard {
+  background-color: #fff;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: .4rem;
+
+  p {
+    padding: 0 1rem .5rem 1rem;
+    color: var(--neutral-gray-900);
+
+    @media (width >=768px) {
+      padding: 0;
+    }
+  }
+
+  .originalUrl {
+    @media (width >=768px) {
+      max-width: 40ch;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: help;
+    }
+
+    @media (width >=1024px) {
+      max-width: 50ch;
+    }
+  }
+
+  .shortenedLink {
+    color: var(--primary-blue-400);
+    padding-block: .8rem;
+
+    @media (width >=768px) {
+      padding: 0;
+    }
+  }
+
+  >div {
+    border-top: 1px solid var(--neutral-gray-400);
+
+    >div {
+      padding-inline: 1rem;
+
+      @media (width >=768px) {
+        padding: 0;
+      }
+    }
+
+    @media (width >=768px) {
+      border: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  button {
+    width: 100%;
+    background-color: var(--primary-blue-400);
+    border: none;
+    color: #fff;
+    padding: .5rem;
+    border-radius: .4rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    @media (width >=768px) {
+      width: auto;
+      padding: .5rem 2rem;
+    }
+  }
+
+  @media (width >=768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  @media (width >=1024px) {
+    padding-inline: 1.5rem;
+  }
+
+  @media (width >= 1440px) {
+    padding-inline: 2rem;
+  }
+}
+
+button.copied {
+  background-color: var(--primary-purple-950);
+  cursor: default;
+
+  &:hover {
+    opacity: 1;
+  }
+}

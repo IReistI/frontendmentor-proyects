@@ -1,0 +1,22 @@
+.ctaTitle {
+  color: #fff;
+  text-align: center;
+  font-size: clamp(1.7rem, 5vw, 2.3rem);
+}
+
+.ctaButton {
+  background-color: var(--primary-blue-400);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  padding: .9rem 3rem;
+  border-radius: 25px;
+  cursor: pointer;
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

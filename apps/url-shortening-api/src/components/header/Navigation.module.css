@@ -1,0 +1,150 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+
+  @media (width >= 768px) {
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+
+  @media (width >= 1024px) {
+    gap: 3rem;
+  }
+
+  > div {
+    @media (width >= 768px) {
+      flex: 1;
+    }
+  }
+}
+
+.btnHamburger {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1000;
+  padding: 0;
+  color: var(--neutral-gray-400);
+
+  @media (width >=768px) {
+    display: none;
+    position: static;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  width: 100%;
+
+  ul {
+    display: none;
+    background-color: var(--primary-purple-950);
+    width: 90%;
+    margin: 0 auto;
+    border-radius: .6rem;
+    padding: 2rem 1.5rem 3rem 1.5rem;
+    gap: 1rem;
+
+    hr {
+      width: 100%;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: none;
+
+      @media (width >= 768px) {
+        display: none;
+      }
+    }
+
+    @media (width >= 768px) {
+      display: flex;
+      flex-direction: row;
+      background-color: transparent;
+      padding: 0;
+      width: auto;
+      align-items: center;
+    }
+
+    @media (width >= 1024px) {
+      gap: 2rem;
+    }
+  }
+
+  @media (width >=768px) {
+    position: static;
+    width: auto;
+    top: auto;
+    right: auto;
+    padding: 0;
+  }
+}
+
+.isMenuOpen {
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    @media (width >=768px) {
+      flex-direction: row;
+    }
+
+    li {
+      width: 100%;
+      text-align: center;
+
+      @media (width >=768px) {
+        width: auto;
+      }
+    }
+  }
+}
+
+.link {
+  color: #fff;
+  padding: .7rem;
+  display: block;
+  width: 100%;
+  border-radius: 1.5rem;
+  transition: color 0.3s ease;
+
+  @media (width >= 768px) {
+    color: var(--neutral-gray-400);
+    width: auto;
+    display: inline-block;
+    padding: 0;
+    font-weight: 700;
+  }
+
+  &:hover {
+    color: var(--neutral-gray-950);
+  }
+}
+
+.login {
+  @media (width >= 768px) {
+    margin-left: auto;
+  }
+}
+
+.signUp {
+  background-color: var(--primary-blue-400);
+  transition: opacity 0.3s ease, color 0.3s ease;
+
+  @media (width >= 768px) {
+    padding: .5rem 1.5rem;
+    color: #fff;
+  }
+  @media (width >= 1024px) {
+    padding: .5rem 1.8rem;
+  }
+  &:hover {
+    opacity: 0.4;
+    color: #fff;
+  }
+}
