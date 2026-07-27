@@ -1,4 +1,4 @@
-import { WeatherSearch } from "./WeatherSearch.tsx";
+import { WeatherSearch } from "./WeatherSearch.tsx"
 
 export function WeatherHero() {
   return (
