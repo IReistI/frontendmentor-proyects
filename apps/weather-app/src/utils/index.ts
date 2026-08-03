@@ -24,15 +24,15 @@ export const formatDate = (date: Date, timeZone?: string) => {
     return formattedDate.format(date);
 };
 
-export const convertTemp = (celsius, toCelsius) => {
-  if (toCelsius) return Math.round(celsius);
-  return Math.round((celsius * 9) / 5 + 32); //Fahrenheit
-};
+// export const convertTemp = (celsius, toCelsius) => {
+//   if (toCelsius) return Math.round(celsius);
+//   return Math.round((celsius * 9) / 5 + 32); //Fahrenheit
+// };
 
-export const convertWind = (kmh, unit) => {
-  if (unit === 'kmh') return Math.round(kmh);
-  return Math.round(kmh * 0.621371); // Mille
-};
+// export const convertWind = (kmh, unit) => {
+//   if (unit === 'kmh') return Math.round(kmh);
+//   return Math.round(kmh * 0.621371); // Mille
+// };
 
 export const getWeatherIcon = (code: number, isDay: number) => {
     const isDayTime = Boolean(isDay);
