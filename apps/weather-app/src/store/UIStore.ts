@@ -1,10 +1,10 @@
-interface UIStore {
-  theme: "light" | "dark"
-  units: "celsius" | "fahrenheit"
+// interface UIStore {
+//   theme: "light" | "dark"
+//   units: "celsius" | "fahrenheit"
 
-// favorites: FavoriteLocation[]
+// // favorites: FavoriteLocation[]
 
-  setTheme: () => void
-  setUnits: () => void
-  addFavorite: () => void
-}
+//   setTheme: () => void
+//   setUnits: () => void
+//   addFavorite: () => void
+// }
