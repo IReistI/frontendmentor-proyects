@@ -1,18 +1,12 @@
-export interface CitySuggestion {
-    id: number;
-    name: string;
-    latitude: number;
-    longitude: number;
-    country: string;
-    admin1?: string;
-}
+import type { GeocodingResponseAPI, Suggestions } from "../types";
 
-export const searchCities = async (query: string, cant: number): Promise<CitySuggestion[]> => {
+export const geocoding = async (query: string, cant: number): Promise<Suggestions[]> => {
     try {
         const url = `https://geocoding-api.open-meteo.com/v1/search?name=${query}&count=${cant}&language=en&format=json`;
         const response = await fetch(url);
-        const result = await response.json();
-        return result.results || []
+        const result: GeocodingResponseAPI = await response.json();
+        if (!result.results) return []
+        return result.results
     } catch (error) {
         console.log(error);
         return [];
